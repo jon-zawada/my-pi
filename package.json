@@ -6,7 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prod:start": "pm2 start npm --name my-pi -- start",
+    "prod:restart": "pm2 restart my-pi",
+    "prod:stop": "pm2 stop my-pi",
+    "prod:delete": "pm2 delete my-pi",
+    "prod:logs": "pm2 logs my-pi",
+    "prod:save": "pm2 save",
+    "prod:status": "pm2 status"
   },
   "dependencies": {
     "@radix-ui/react-progress": "^1.1.7",
