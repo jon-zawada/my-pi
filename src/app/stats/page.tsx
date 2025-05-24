@@ -30,7 +30,7 @@ export default async function Home() {
 
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-foreground">CPU Usage</h3>
-            {systemInfo.cpuUsage.map((usage: any, index: any) => (
+            {systemInfo.cpuUsage.map((usage: string, index: number) => (
               <div key={index} className="space-y-1">
                 <div className="flex justify-between text-sm text-muted-foreground">
                   <span>Core {index}</span>
