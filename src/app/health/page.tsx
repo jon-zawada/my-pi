@@ -1,3 +1,4 @@
+export const revalidate = 0;  // disable static caching / ISR for this page
 import { getSystemDetails } from "@/lib/system";
 import { formatUptime } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

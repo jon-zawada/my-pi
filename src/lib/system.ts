@@ -50,9 +50,6 @@ async function getTopProcesses(limit = 5) {
   });
 }
 
-
-
-
 async function getDiskUsage() {
   const { stdout } = await execAsync("df -h /");
   const lines = stdout.trim().split("\n");
@@ -82,14 +79,10 @@ async function getDiskUsage() {
 
 
 export async function getSystemDetails() {
-  // Get CPU usage
   const cpuUsage = getCpuUsage();
-
-  // Get memory info
   const totalMem = os.totalmem();
   const freeMem = os.freemem();
   const usedMem = totalMem - freeMem;
- 
   const cpuTemp = await getCpuTemp();
   const diskUsage = await getDiskUsage();
   const topProcesses = await getTopProcesses();
